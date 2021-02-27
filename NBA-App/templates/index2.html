@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>| NBA Analysis</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../static/css/style.css'">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="../static/images/favicon.ico" />
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>NBA Champion Analysis</h1>
+        <p>Jacob Stryker | Jonathan Stafford-Bentley | Steve Ovsak | Cassian Samaniego | Joel Watkins | Abraham Youkhanna</p>
+        <hr class="my-4">
+        
+        <p><a href="https://github.com/Jonnybobba/NBA_Analysis", style="color: black;">Github Link |</a><a href="https://public.tableau.com/profile/joel.watkins#!/vizhome/NBA_Champion_Analysis/Story1", style="color: black;"> Tableau Link</a></p>
+        
+      </div>
+    </div> 
+  
+    <div class = "row-content">
+      <div class="col-sm-12 col-med-6 col-lg-6">
+          <h2 class="text-left">    <img src="../static/images/NBA-icon.png" height="50px" width="50px" class="" alt="#"> Summary</h2>
+          <hr class="my-4">
+          <a href="">
+            <img src="../static/images/ball.png" ALIGN="left" height="150px" width="150px" class="center" alt="#">
+            </a>
+          <p>As a Group, we set out with the goal to use Machine Learning to Predict the NBA Champion of 19-20 season. </p>
+          <p>Being NBA fans, this topic intrigued each of us equally. We were able to use Tableau as well as Machine Learning to visualize and ultimately predict the correct Champion of the 19-20 NBA season. With the code we’ve developed we’ll be able to plug in current NBA data to predict future champions.</p>
+          
+        </div>
+      
+    </div>
+    <div class = "row-content">
+      <div class="col-sm-12 col-med-6 col-lg-6">
+          <h2 class="text-left">    <img src="../static/images/NBA-icon.png" height="50px" width="50px" class="" alt="#"> Data Collection/Cleanup</h2>
+          <hr class="my-4">
+          <p>Data was sourced from basketball-reference.com. Data was originally divided into separate tables and sorted by season. In order to make the data usable for analysis, the tables were merged together to add all seasons to make one table. Two Boolean columns were added to denote if the team made the playoffs that season, and if they won the championship. </p>
+          <p>Names of the Seattle Supersonics, Charlotte bobcats, and New Orleans Hornets were changed to the Oklahoma City Thunder, Charlotte Hornets, and New Orleans Pelicans (respectively).</p>
+          <a href="">
+        <img src="../static/images/NBA_Data.png" height="" width="" class="img-responsive" alt="#">
+        </a>
+      </div>
+    </div>
+      <div class="col-sm-12 col-med-6 col-lg-6">
+        <h2 class="text-left"> <img src="../static/images/NBA-icon.png" height="50px" width="50px" class="" alt="#"> Data Analysis</h2>
+        <hr class="my-4">
+        <p>In order to gain insight on our data, we decided to use Tableau. Within Tableau, we analyzed key statistics to begin determining what it takes to win an NBA Championship. </p>
+        <p>We looked at offensive and defensive stats as well as other key statistics, such as rebounding, turnovers, free throws attempts and personal fouls. With this we were able to find major trends that further helped our understanding of our Machine Learning modules.</p>
+        <a href="https://public.tableau.com/profile/joel.watkins#!/vizhome/Bubble_Chart_16143857505340/Sheet7?publish=yes">
+          <img src="../static/images/Bubble_Chart_Champs.png" height="" width="" class="img-responsive" alt="#">
+          </a>
+          <a href="https://public.tableau.com/profile/joel.watkins#!/vizhome/PPG_per_champ/Sheet1?publish=yes">
+            <img src="../static/images/PPG_Champ.png" height="" width="" class="img-responsive" alt="#">
+            </a>
+      
+        </a>
+        
+      </div>
+
+      <div class = "row-content">
+        <div class="col-sm-12 col-med-6 col-lg-6">
+            <h2 class="text-left"><img src="../static/images/NBA-icon.png" height="50px" width="50px" class="" alt="#"> Machine Learning</h2>
+            <hr class="my-4">
+            <p>After analyzing past performances of champions, we decided to model a couple machine learning programs to see if we could predict a future champion with only regular season stats.</p>
+      <p>Initially, we compiled a linear regression model using 2000-2018 data to train the model and 2019 data to predict a champion. Unfortunately it basis for predicting the champion seemingly looked to closely at offensive stats, causing a inaccurate prediction.
+      </p>
+      <div class="image">
+      <div class="col-sm-12 col-med-3 col-lg-3"></div>
+      <a href="https://public.tableau.com/profile/joel.watkins#!/vizhome/Linear_Reg/Dashboard3?publish=yes">
+        <img src="../static/images/Linear_Reg_ML.png" height="" width="" class="img-responsive" alt="#">
+        </a>
+        <p>We then decided to move on to a neural network model, which with a large quantity of epochs and multiple layers we were able to produce prediction values for the 2019 season. After looking over the results we found that teams that had a significantly less games had a higher prediction value to win the championship. Due to COVID-19 these teams cut their season short taking them out of contention for the championship.</p>
+      <a href="https://public.tableau.com/profile/joel.watkins#!/vizhome/Neural_Net/Dashboard2?publish=yes">
+        <img src="../static/images/Neural_Net.png" height="" width="" class="img-responsive" alt="#">
+      </a>
+    </div>
+        </div>
+      
+      </div>
+
+  </div>
+
+
+
+<div class = "row-content">
+  <div class="col-sm-12 col-med-12 col-lg-12">
+      <h2 class="text-left"><img src="../static/'images/NBA-icon.png" height="50px" width="50px" class="" alt="#"> Conclusion</h2>
+      <hr class="my-4">
+      <a href="">
+        <img src="../static/images/NBA_trophy.png" ALIGN="left" height="150px" width="150px" class="center" alt="#">
+        </a>
+      <p>Before running any analysis, The Milwaukee Bucks were initially thought to have been predicted as champions based on a general overview of their team stats. Once the linear regression model was completed the Milwaukee Buck were indeed picked to be the 2020 NBA champions. Despite certain limitation to this method, the neural network model correctly predicted that The Los Angeles Lakers won the 2019 NBA Championship.
+  </p>
+</div>
+
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="../static/js/app.js"></script>
+
+</body>
+
+</html>
